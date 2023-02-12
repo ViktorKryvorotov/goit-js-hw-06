@@ -7,4 +7,3 @@ numberItemEl.forEach((element)=>{
 }
 )
 
-
