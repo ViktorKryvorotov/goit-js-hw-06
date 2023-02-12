@@ -22,3 +22,16 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+img{
+  height: 100%;
+  display: block;
+}
+li{
+  list-style: none;
+}
+.gallery{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  background-color: rgb(95, 122, 116);
+}
