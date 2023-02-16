@@ -8,16 +8,28 @@ const ingredients = [
 ];
 
 
-const itemEl=document.querySelector('#ingredients');
-const newArray=[];
+const ulEl = document.querySelector('#ingredients');
 
-ingredients.forEach((ingredient)=>{
-  const addNewItemEl=document.createElement("li");
-  addNewItemEl.textContent=ingredient;
-  addNewItemEl.classList.add('item');
-  newArray.push(addNewItemEl);
-})
-itemEl.append(...newArray);
+const liListEl = ingredients.map((ingredient) => {
+  const liEl = document.createElement("li");
+  liEl.textContent = ingredient;
+  liEl.classList.add('item');
+
+  return liEl;
+});
+ulEl.append(...liListEl);
+
+
+// const itemEl=document.querySelector('#ingredients');
+// const newArray=[];
+
+// ingredients.forEach((ingredient)=>{
+//   const addNewItemEl=document.createElement("li");
+//   addNewItemEl.textContent=ingredient;
+//   addNewItemEl.classList.add('item');
+//   newArray.push(addNewItemEl);
+// })
+// itemEl.append(...newArray);
 
 
 // const addNewItemEl=(ingredients)=> 
