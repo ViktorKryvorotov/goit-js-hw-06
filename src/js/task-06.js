@@ -3,10 +3,10 @@ const validationInput = document.querySelector('#validation-input');
 
 validationInput.addEventListener('blur',onValidationInput);
 
-function onValidationInput(ev) {
+function onValidationInput(event) {
    
      if (
-    ev.currentTarget.value.length === Number(validationInput.dataset.length)
+    event.currentTarget.value.length === Number(validationInput.dataset.length)
   ) {
          validationInput.classList.add("valid");
          validationInput.classList.remove("invalid");
