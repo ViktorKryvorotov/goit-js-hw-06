@@ -12,25 +12,25 @@ const ulEl = document.querySelector('#ingredients');
 
 
 
-const liListEl = ingredients.reduce((acc, ingredient) => {
-  const liEl = document.createElement("li");
-  liEl.textContent = ingredient;
-  liEl.classList.add('item');
-  acc.appendChild(liEl);
-  return acc;
-}, ulEl);
-console.log(ulEl)
-
-//--------------------------------------------------------------//
-
-// const liListEl = ingredients.map((ingredient) => {
+// const liListEl = ingredients.reduce((acc, ingredient) => {
 //   const liEl = document.createElement("li");
 //   liEl.textContent = ingredient;
 //   liEl.classList.add('item');
+//   acc.appendChild(liEl);
+//   return acc;
+// }, ulEl);
+// console.log(ulEl)
 
-//   return liEl;
-// });
-// ulEl.append(...liListEl);
+//--------------------------------------------------------------//
+
+const liListEl = ingredients.map((ingredient) => {
+  const liEl = document.createElement("li");
+  liEl.textContent = ingredient;
+  liEl.classList.add('item');
+
+  return liEl;
+});
+ulEl.append(...liListEl);
 
 
 
